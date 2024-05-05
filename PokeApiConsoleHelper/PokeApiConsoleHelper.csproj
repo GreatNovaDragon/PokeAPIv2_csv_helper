@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PublishAot>true</PublishAot>
+        <InvariantGlobalization>true</InvariantGlobalization>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CsvHelper" Version="31.0.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+      <PackageReference Include="Spectre.Console" Version="0.49.0" />
+      <PackageReference Include="Spectre.Console.Cli" Version="0.49.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Data\New\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Data\New\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Data\New\**" />
+    </ItemGroup>
+
+</Project>
